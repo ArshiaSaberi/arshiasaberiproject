@@ -1,0 +1,454 @@
+/* ------------------------font----------------------- */
+
+/* ////////////////font ///////////////////////////*/
+/* ---------------------- reset ------------------------- */
+
+/* ////////////////////////////// reset ////////////////////////// */
+/* ------------------------------- reset me ------------------------------ */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* ///////////////////////  reset me ////////////////////////////// */
+
+:root {
+  --primary-font: "IRANSansWeb", Arial, Helvetica, sans-serif;
+  --primary-font-bo: "IRANSansWeb_Bold", Arial, Helvetica, sans-serif;
+  --secondary-font: "IRANSansWeb_Light", Arial, Helvetica, sans-serif;
+  --c-white: #fff;
+  --c-dark: rgb(17 24 39 / 1);
+  --c-dark-blue: rgb(88 142 255);
+  --color: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  background-color: var(--color);
+  overflow-x: hidden;
+}
+
+/*---------------------------------- helpear classe ------------------------- */
+.d-f {
+  display: flex;
+}
+
+.d-b {
+  display: block;
+}
+
+.d-n {
+  display: none;
+}
+
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark li a {
+  color: rgb(205 208 213);
+}
+
+.dark {
+  color: rgb(205 208 213);
+}
+
+/*////////////////////////////// helpear classe ///////////////////////////// */
+/*---------------------------------- component------------------------- */
+
+/*////////////////////////////// component ///////////////////////////// */
+
+/* ------------------------------------------------------------------- */
+.contact-fix {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color);
+  right: 2px;
+  width: 4rem;
+  z-index: 111;
+}
+
+.dark .contact-fix>a {
+  color: rgb(255, 255, 255);
+}
+
+.contact-fix> :nth-child(1) {
+  color: black;
+  transition: all 0.1.5s ease;
+}
+
+.contact-fix> :nth-child(1):hover {
+  color: blue;
+  opacity: 1;
+}
+
+.contact-fix> :nth-child(2) {
+  color: black;
+  transition: all 0.1.5s ease;
+}
+
+.contact-fix> :nth-child(2):hover {
+  color: blue;
+  opacity: 1;
+}
+
+.contact-fix> :nth-child(3) {
+  color: black;
+  transition: all 0.1.5s ease;
+}
+
+.contact-fix> :nth-child(3):hover {
+  color: rgb(140, 0, 255);
+  opacity: 1;
+}
+
+.contact-fix> :nth-child(4) {
+  color: black;
+  transition: all 0.1.5s ease;
+}
+
+.contact-fix> :nth-child(4):hover {
+  color: rgb(0, 255, 34);
+  opacity: 1;
+}
+
+.contact-fix> :nth-child(5) {
+  color: black;
+  transition: all 0.1.5s ease;
+}
+
+.contact-fix> :nth-child(5):hover {
+  color: blue;
+  opacity: 1;
+}
+
+.contact-fix> :nth-child(6) {
+  color: black;
+  transition: all 0.1.5s ease;
+}
+
+.contact-fix> :nth-child(6):hover {
+  color: rgb(255, 3, 3);
+  opacity: 1;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  box-shadow: -1px -13px 7rem 5px green;
+  top: 0;
+  background-color: var(--color);
+  border-bottom: 1px solid #26a326;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.menu-des {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: "IRANSansWeb_Light";
+}
+
+.menu-des__item {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  line-height: 28px;
+}
+
+.menu-des__item:first-child {
+  margin-left: 0;
+}
+
+.menu-des__item--hover .menu-des__link {
+  color: rgb(0, 197, 0);
+}
+
+.menu-des__link {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-des__link::after {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  height: 2px;
+  background-color: rgb(190, 243, 65);
+}
+
+.active .menu-des__link::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-des__item--active .menu-des__link {
+  color: green;
+}
+
+.active .menu-des__link::after {
+  display: block;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+a img {
+  width: 142px;
+  height: 82px;
+}
+
+.swich-mode {
+  background-color: var(--color);
+  cursor: pointer;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.swich-mode__light {
+  width: 24px;
+  height: 24px;
+}
+
+.swich-mode__dark {
+  width: 24px;
+  height: 24px;
+}
+
+.main {
+  margin: 0px 30px;
+}
+
+.main-header {
+  display: flex;
+  padding: 17rem 50px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main>section>img {
+  border-radius: 50%;
+  box-shadow: -1px 7px 20px 14px #97b992;
+  border: 10px solid var(--color);
+}
+
+.dark .main>section>img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 19px 7px #97b992;
+  border: 2px solid var(--color);
+}
+
+.main-about {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main__Introduction {
+  width: 110px;
+  margin-left: auto;
+  height: 30px;
+  font-size: 14px;
+  font-family: "IRANSansWeb_Light";
+  display: flex;
+  color: var(--c-dark);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(67, 153, 89);
+  background: linear-gradient(to right, rgb(184, 255, 184), rgb(163, 188, 243));
+}
+
+.main__title {
+  font-family: "IRANSansWeb_Bold";
+  font-size: 30px;
+  width: 346px;
+  margin-left: auto;
+}
+
+.main__title>span {
+  color: chartreuse;
+}
+
+.main__Activity {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  column-gap: 6px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-type {
+  color: rgb(119, 0, 255);
+}
+
+.main__caption {
+  width: 272px;
+  margin-left: auto;
+  text-align: right;
+  width: 582px;
+  opacity: 0.7;
+}
+
+.nav__toggle-icon {
+  display: none;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__toggle-line {
+  width: 4.5rem;
+  height: 0.4rem;
+  z-index: 11;
+  position: relative;
+  background-color: rgb(0 255 146);
+  border-radius: 2rem;
+}
+
+.nav__toggle-line::before,
+::after {
+  width: 4.5rem;
+  height: 0.4rem;
+  position: absolute;
+  background-color: rgb(0 255 146);
+  border-radius: 2rem;
+  transition: all 0.1s ease-in;
+}
+
+.nav__toggle-line::before {
+  content: "";
+  top: 1rem;
+}
+
+.nav__toggle-line::after {
+  content: "";
+  bottom: 1rem;
+}
+
+.nav__toggle-icon--open .nav__toggle-line {
+  background-color: transparent;
+}
+
+.nav__toggle-icon--open .nav__toggle-line::after {
+  transform: translateY(12px) rotate(-45deg);
+}
+
+.nav__toggle-icon--open .nav__toggle-line::before {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+/*////////////////////////////// maim ///////////////////////////// */
+
+
+/* .     .......      .  .       .about me.    .  .     .......  .*/
+.about {}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+
+.title__section {
+  font-family: var(--primary-font-bo);
+  font-size: 2rem;
+  color: chartreuse;
+}
+
+.title__caption {
+  opacity: 0.7;
+  margin: 1rem 0;
+  border-bottom: 1px solid #084024;
+  padding-bottom: 8px;
+  font-family: var(--secondary-font);
+}
+
+.title::after{
+  content: "";
+  position: absolute;
+  background-color: #084024;
+  height: 2px;
+  width: 90px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  transform: rotate(50deg);
+}
+.title::before{
+  content: "";
+  position: absolute;
+  background-color: #084024;
+  height: 2px;
+  width: 90px;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  top: 0;
+  transform: rotate(-50deg);
+}
+.dark .title::before , .dark .title::after {
+  background-color: #136e41;
+}
